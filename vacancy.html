@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Территория Бухучета - Блог</title>
-	<meta property="og:title" content="Территория Бухучета - Блог">
+	<title>Территория Бухучета - Главный бухгалтер</title>
+	<meta property="og:title" content="Территория Бухучета - Главный бухгалтер">
 	<meta property="og:description" content="Описание">
 	<meta property="og:url" content="/">
-	<meta property="og:site_name" content="Территория Бухучета - Блог">
+	<meta property="og:site_name" content="Территория Бухучета - Главный бухгалтер">
 	<!-- favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -54,7 +54,7 @@
 						</ul>
 					</nav>
 					<a href="#" class="header__btn btn btn--md btn--dark-border">Свяжитесь с нами</a>
-					<div class="c-icons c-icons--blue header__icons">
+					<div class="c-icons c-icons--yellow header__icons">
 						<ul class="c-icons__list">
 							<li class="c-icons__item">
 								<a href="#" class="c-icons__link">
@@ -79,128 +79,79 @@
 		<!-- content -->
 		<div class="wrapper__content">
 			<!-- main -->
-			<section class="main main--blue" id="main">
+			<section class="main main--yellow" id="main">
 				<div class="main__wrap">
 					<div class="container">
 						<div class="main__body">
-							<h1 class="main__heading">Блог</h1>
+							<h1 class="main__heading">Главный бухгалтер</h1>
+							<div class="main__bottom">
+								<a href="index.html" class="main__btn btn btn--dark">Вернуться на главную</a>
+							</div>
 						</div>
+						<picture class="main__img">
+							<img src="img/icon-search.svg" alt="Image">
+						</picture>
 						<div class="main__before"></div>
 						<div class="main__after"></div>
 					</div>
 				</div>
-				<div class="main__additional">
-					<a href="#" class="services-card services-card--dark main__services">
-						<div class="services-card__wrap">
-							<div class="services-card__block">
-								<span class="services-card__title">Обойдемся без ошибок в бухучете</span>
+			</section>
+			<!-- end of main -->
+			<!-- section inner -->
+			<section class="section-inner" id="section-inner">
+				<div class="container">
+					<div class="section-inner__content content">
+						<p><b>Мы предлагаем Вам окунуться в доброжелательную атмосферу нашей профессиональной бухгалтерской компании "Территория Бухучета" в качестве старшего бухгалтера. Работая в "Территории Бухучета", Вы будете вести бухгалтерский и налоговый учет нескольких юридических лиц с небольшими оборотами (без права подписи).</b></p>
+						<p>Мы рады будем рассмотреть кандидатуры исполнительных, ответственных, коммуникабельных девушек и женщин со знанием всех участков бухгалтерского учета и налогового законодательства, с опытом работы в бухгалтерии от 1-го года, свободно владеющими компьютером (Word, Excel, 1С-Бухгалтерия)</p>
+						<h2>Требования и условия</h2>
+						<ul>
+							<li>Высшее финансовое образование будет дополнительным плюсом;</li>
+							<li>Полный рабочий день с понедельника по пятницу;</li>
+							<li>Оформление по ТК;</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- end of section inner -->
+			<!-- reply -->
+			<section class="reply" id="reply">
+				<div class="container">
+					<h2 class="reply__heading">Откликнуться</h2>
+					<form action="#" class="reply-form reply__form">
+						<div class="input-field reply-form__input">
+							<div class="input-field__inner">
+								<input type="text" id="reply-name" class="input-field__input" placeholder="Ваше имя">
 							</div>
-							<div class="services-card__block"></div>
-							<picture class="services-card__img">
-								<img src="img/services-02.jpg" alt="Image">
-							</picture>
-							<div class="services-card__icon">
+						</div>
+						<div class="input-field reply-form__input">
+							<div class="input-field__inner">
+								<input type="tel" id="reply-tel" class="input-field__input" placeholder="Ваш телефон">
+							</div>
+						</div>
+						<div class="reply-form__inner">
+							<div class="file reply-form__file">
+								<input type="file" id="reply-file" class="file__input">
+								<label for="reply-file" class="file__label">
+									<svg>
+										<use xlink:href="img/sprite.svg#icon-attach"></use>
+									</svg>
+									<span>Добавить резюме</span>
+								</label>
+							</div>
+							<button class="reply-form__btn btn btn--circle btn--dark">
 								<svg>
 									<use xlink:href="img/sprite.svg#icon-arrow-more"></use>
 								</svg>
-							</div>
+							</button>
 						</div>
-					</a>
+					</form>
+					<picture class="reply__img">
+						<img src="img/article-01.jpg" alt="Image">
+					</picture>
+					<div class="reply__before"></div>
 				</div>
 			</section>
-			<!-- end of main -->
-			<!-- services -->
-			<div class="services" id="services">
-				<div class="container">
-					<div class="services__wrapper">
-						<a href="#" class="services-card services__item">
-							<div class="services-card__wrap">
-								<div class="services-card__block">
-									<span class="services-card__title">Бухгалтер в сетях</span>
-								</div>
-								<div class="services-card__block"></div>
-								<div class="services-card__icon">
-									<svg>
-										<use xlink:href="img/sprite.svg#icon-arrow-more"></use>
-									</svg>
-								</div>
-							</div>
-						</a>
-						<a href="#" class="services-card services-card--blue services__item">
-							<div class="services-card__wrap">
-								<div class="services-card__block">
-									<span class="services-card__title">Неиспользованный отпуск — <br>компенсация</span>
-								</div>
-								<div class="services-card__block"></div>
-								<picture class="services-card__img">
-									<img src="img/services-01.jpg" alt="Image">
-								</picture>
-								<div class="services-card__icon">
-									<svg>
-										<use xlink:href="img/sprite.svg#icon-arrow-more"></use>
-									</svg>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-			<!-- end of services -->
-			<!-- blog -->
-			<section class="blog" id="blog">
-				<div class="container">
-					<div class="blog__wrapper">
-						<div class="blog-card blog__item">
-							<div class="blog-card__wrapper">
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Бросаем фирму добровольно</a>
-								</div>
-							</div>
-						</div>
-						<div class="blog-card blog__item">
-							<div class="blog-card__wrapper">
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Анализ полугодовой отчетности</a>
-								</div>
-							</div>
-						</div>
-						<div class="blog-card blog__item">
-							<div class="blog-card__wrapper">
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Бизнес без бухгалтерии</a>
-									<p class="blog-card__description">Бухгалтерский учет - дело объемное и сложное, требующее повышенного внимания, времени, кадров и средств. Но ни одна московская фирма без него не обойдется. Иногда предприниматели не могут или не хотят полностью вести собственную бухгалтерию.</p>
-								</div>
-							</div>
-						</div>
-						<div class="blog-card blog__item">
-							<div class="blog-card__wrapper">
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Оптимизация налогообложения с препятствиями</a>
-								</div>
-								<picture class="blog-card__img">
-									<img src="img/blog-01.jpg" alt="Image">
-								</picture>
-							</div>
-						</div>
-						<div class="blog-card blog__item">
-							<div class="blog-card__wrapper">
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Бухгалтера вызывали?</a>
-								</div>
-							</div>
-						</div>
-						<div class="blog-card blog__item">
-							<div class="blog-card__wrapper">
-								<div class="blog-card__body">
-									<a href="#" class="blog-card__title">Выбираем организационую форму</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a href="#" class="blog__more btn btn--dark">Загрузить еще</a>
-				</div>
-			</section>
-			<!-- end of blog -->
+			<!-- end of reply -->
 		</div>
 		<!-- end of content -->
 		<!-- footer -->
@@ -308,6 +259,9 @@
 		</clipPath>
 		<clipPath id="reviews-before" clipPathUnits="objectBoundingBox">
 			<path d="M1,0 H0 V1 C0,0.942,0.013,0.895,0.028,0.895 H0.813 C0.865,0.895,0.907,0.739,0.907,0.545 V0.35 C0.907,0.159,0.949,0.004,1,0 V0" fill="white" />
+		</clipPath>
+		<clipPath id="reply-before" clipPathUnits="objectBoundingBox">
+			<path d="M0,0 V1 H1 C0.888,1,0.797,0.886,0.797,0.746 V0.504 C0.797,0.364,0.706,0.25,0.594,0.25 H0.203 C0.092,0.25,0.002,0.139,0,0" fill="white" />
 		</clipPath>
 	</svg>
 	<!-- end of decor -->
