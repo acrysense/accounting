@@ -40,16 +40,16 @@
 					<nav class="nav header__nav">
 						<ul class="nav__list">
 							<li class="nav__item">
-								<a href="#" class="nav__link">Услуги и цены</a>
+								<a href="service.html" class="nav__link">Услуги и цены</a>
 							</li>
 							<li class="nav__item">
 								<a href="about.html" class="nav__link">О нас</a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__link">Статьи</a>
+								<a href="article.html" class="nav__link">Статьи</a>
 							</li>
 							<li class="nav__item">
-								<a href="#" class="nav__link">Контакты</a>
+								<a href="contacts.html" class="nav__link">Контакты</a>
 							</li>
 						</ul>
 					</nav>
@@ -57,16 +57,16 @@
 					<div class="c-icons c-icons--accent header__icons">
 						<ul class="c-icons__list">
 							<li class="c-icons__item">
-								<a href="#" class="c-icons__link">
+								<a href="mailto:info@tby.ru" class="c-icons__link">
 									<svg class="c-icons__icon">
-										<use xlink:href="img/sprite.svg#icon-pin"></use>
+										<use xlink:href="img/sprite.svg#icon-email"></use>
 									</svg>
 								</a>
 							</li>
 							<li class="c-icons__item">
-								<a href="#" class="c-icons__link">
+								<a href="#" class="c-icons__link" id="hamburger-toggle">
 									<svg class="c-icons__icon">
-										<use xlink:href="img/sprite.svg#icon-email"></use>
+										<use xlink:href="img/sprite.svg#icon-menu"></use>
 									</svg>
 								</a>
 							</li>
@@ -80,13 +80,76 @@
 		<div class="wrapper__content">
 			<!-- main -->
 			<section class="main main--accent" id="main">
-				<div class="main__wrap">
+				<div class="main__wrap main__wrap--contacts">
 					<div class="container">
 						<div class="main__body">
 							<h1 class="main__heading">Всегда на связи</h1>
+							<div class="main__bottom main__bottom--wide">
+								<div class="contacts-tabs">
+									<ul class="contacts-tabs__list">
+										<li class="contacts-tabs__item is--active">
+											<a href="#" class="contacts-tabs__tab">Москва, Тимирязевская</a>
+										</li>
+										<li class="contacts-tabs__item">
+											<a href="#" class="contacts-tabs__tab">Москва, Серпуховская</a>
+										</li>
+										<li class="contacts-tabs__item">
+											<a href="#" class="contacts-tabs__tab">Кострома, Карла Маркса</a>
+										</li>
+										<li class="contacts-tabs__item">
+											<a href="#" class="contacts-tabs__tab">Ижевск, Фридриха Энгельса</a>
+										</li>
+										<li class="contacts-tabs__item">
+											<a href="#" class="contacts-tabs__tab">Иркутск, Колчака</a>
+										</li>
+									</ul>
+									<div class="default-select contacts-tabs__select">
+										<select class="js-select">
+											<option value="0">Москва, Тимирязевская</option>
+											<option value="1">Москва, Серпуховская</option>
+											<option value="2">Кострома, Карла Маркса</option>
+											<option value="3">Ижевск, Фридриха Энгельса</option>
+											<option value="4">Иркутск, Колчака</option>
+										</select>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="main__before"></div>
-						<div class="main__after main__after--left"></div>
+						<!-- <div class="main__after main__after--left"></div> -->
+					</div>
+				</div>
+				<div class="contacts main__contacts">
+					<div class="container">
+						<div class="contacts__wrap">
+							<ul class="contacts__list">
+								<li class="contacts__item">
+									<a href="tel:+74952233513" class="contacts__link">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-phone"></use>
+										</svg>
+										<span>+7 (495) 223-35-13</span>
+									</a>
+								</li>
+								<li class="contacts__item">
+									<a href="mailto:info@tby.ru" class="contacts__link">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-email"></use>
+										</svg>
+										<span>info@tby.ru</span>
+									</a>
+								</li>
+								<li class="contacts__item">
+									<a href="#" class="contacts__link">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-pin"></use>
+										</svg>
+										<span>ул. Яблочкова д. 21, корп. 3, офис 16</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="contacts__map" id="contacts-map"></div>
 					</div>
 				</div>
 			</section>
@@ -143,7 +206,7 @@
 		</div>
 		<!-- end of content -->
 		<!-- footer -->
-		<footer class="footer footer--indent-lg" id="footer">
+		<footer class="footer " id="footer">
 			<div class="container">
 				<div class="footer__wrapper">
 					<div class="footer__left">
@@ -254,11 +317,251 @@
 		<clipPath id="reply-img-center" clipPathUnits="objectBoundingBox">
 			<path d="M0,0 H0 V1 H0.853 C0.62,1,0.431,0.958,0.431,0.907 V0.654 C0.431,0.619,0.558,0.591,0.715,0.591 C0.873,0.591,1,0.563,1,0.528 V0.184 C1,0.133,0.811,0.091,0.578,0.091 H0.422 C0.193,0.091,0.006,0.05,0,0" fill="white" />
 		</clipPath>
+		<clipPath id="contacts-after" clipPathUnits="objectBoundingBox">
+			<path d="M0.001,0 C0.019,0,0.034,0.078,0.034,0.174 V0.656 C0.034,0.753,0.049,0.831,0.067,0.831 H0.968 C0.986,0.831,1,0.906,1,1 V0 H0.001" fill="white" />
+		</clipPath>
 	</svg>
 	<!-- end of decor -->
 	<!-- scripts -->
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
+	<!-- map -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript">
+		// When the window has finished loading create our google map below
+		google.maps.event.addDomListener(window, 'load', init);
+
+		function init() {
+			// Basic options for a simple Google Map
+			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+			var mapOptions = {
+				// How zoomed in you want the map to start at (always required)
+				zoom: 11,
+
+				// The latitude and longitude to center the map (always required)
+				center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+				// How you would like to style the map. 
+				// This is where you would paste any style found on Snazzy Maps.
+				styles: [{
+					"featureType": "administrative",
+					"elementType": "geometry",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				}, {
+					"featureType": "administrative",
+					"elementType": "geometry.fill",
+					"stylers": [{
+						"color": "#000000"
+					}, {
+						"visibility": "on"
+					}]
+				}, {
+					"featureType": "administrative",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#444444"
+					}]
+				}, {
+					"featureType": "administrative",
+					"elementType": "labels.icon",
+					"stylers": [{
+						"hue": "#e73e15"
+					}]
+				}, {
+					"featureType": "administrative.province",
+					"elementType": "geometry.stroke",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				}, {
+					"featureType": "landscape",
+					"elementType": "all",
+					"stylers": [{
+						"color": "#f2f2f2"
+					}]
+				}, {
+					"featureType": "landscape",
+					"elementType": "geometry.fill",
+					"stylers": [{
+						"color": "#ebebeb"
+					}, {
+						"lightness": 50
+					}]
+				}, {
+					"featureType": "landscape.man_made",
+					"elementType": "labels",
+					"stylers": [{
+						"saturation": "36"
+					}]
+				}, {
+					"featureType": "poi",
+					"elementType": "all",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				}, {
+					"featureType": "poi",
+					"elementType": "labels.text",
+					"stylers": [{
+						"color": "#e93d15"
+					}, {
+						"visibility": "simplified"
+					}]
+				}, {
+					"featureType": "road",
+					"elementType": "all",
+					"stylers": [{
+						"saturation": -100
+					}, {
+						"lightness": 45
+					}]
+				}, {
+					"featureType": "road",
+					"elementType": "labels.icon",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				}, {
+					"featureType": "road.highway",
+					"elementType": "all",
+					"stylers": [{
+						"visibility": "simplified"
+					}]
+				}, {
+					"featureType": "road.highway",
+					"elementType": "geometry.fill",
+					"stylers": [{
+						"color": "#e74700"
+					}, {
+						"visibility": "on"
+					}]
+				}, {
+					"featureType": "road.highway",
+					"elementType": "labels.text",
+					"stylers": [{
+						"visibility": "on"
+					}]
+				}, {
+					"featureType": "road.highway",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#e93d15"
+					}, {
+						"visibility": "on"
+					}]
+				}, {
+					"featureType": "road.highway",
+					"elementType": "labels.text.stroke",
+					"stylers": [{
+						"color": "#ffffff"
+					}, {
+						"visibility": "on"
+					}]
+				}, {
+					"featureType": "road.arterial",
+					"elementType": "geometry.fill",
+					"stylers": [{
+						"color": "#d7d7d7"
+					}, {
+						"lightness": -5
+					}, {
+						"visibility": "on"
+					}]
+				}, {
+					"featureType": "road.arterial",
+					"elementType": "labels.icon",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				}, {
+					"featureType": "road.local",
+					"elementType": "geometry.fill",
+					"stylers": [{
+						"color": "#d7d7d7"
+					}, {
+						"lightness": 40
+					}, {
+						"visibility": "on"
+					}]
+				}, {
+					"featureType": "road.local",
+					"elementType": "labels.text",
+					"stylers": [{
+						"color": "#e93d15"
+					}, {
+						"visibility": "on"
+					}]
+				}, {
+					"featureType": "road.local",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#e93d15"
+					}]
+				}, {
+					"featureType": "road.local",
+					"elementType": "labels.text.stroke",
+					"stylers": [{
+						"color": "#ffffff"
+					}, {
+						"visibility": "on"
+					}]
+				}, {
+					"featureType": "transit",
+					"elementType": "all",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				}, {
+					"featureType": "transit.station.rail",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#000000"
+					}]
+				}, {
+					"featureType": "transit.station.rail",
+					"elementType": "labels.text.stroke",
+					"stylers": [{
+						"color": "#ffffff"
+					}]
+				}, {
+					"featureType": "water",
+					"elementType": "all",
+					"stylers": [{
+						"color": "#e73e15"
+					}, {
+						"visibility": "on"
+					}]
+				}, {
+					"featureType": "water",
+					"elementType": "geometry.fill",
+					"stylers": [{
+						"color": "#d7d7d7"
+					}, {
+						"lightness": 10
+					}, {
+						"visibility": "on"
+					}]
+				}]
+			};
+
+			// Get the HTML DOM element that will contain your map 
+			// We are using a div with id="map" seen below in the <body>
+			var mapElement = document.getElementById('contacts-map');
+
+			// Create the Google Map using our element and options defined above
+			var map = new google.maps.Map(mapElement, mapOptions);
+
+			// Let's also add a marker while we're at it
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(40.6700, -73.9400),
+				map: map,
+				title: 'Snazzy!'
+			});
+		}
+	</script>
+	<!-- end of map -->
 </body>
 
 </html>
