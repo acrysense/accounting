@@ -116,7 +116,6 @@
 							</div>
 						</div>
 						<div class="main__before"></div>
-						<!-- <div class="main__after main__after--left"></div> -->
 					</div>
 				</div>
 				<div class="contacts main__contacts">
@@ -326,241 +325,91 @@
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
 	<!-- map -->
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-	<script type="text/javascript">
-		// When the window has finished loading create our google map below
-		google.maps.event.addDomListener(window, 'load', init);
+	<script src="https://api-maps.yandex.ru/v3/?apikey=272daf47-8e86-4f2b-8795-f9014a7090ad&lang=ru_RU"></script>
+	<script>
+		ymaps3.ready.then(init);
 
 		function init() {
-			// Basic options for a simple Google Map
-			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-			var mapOptions = {
-				// How zoomed in you want the map to start at (always required)
-				zoom: 11,
-
-				// The latitude and longitude to center the map (always required)
-				center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-				// How you would like to style the map. 
-				// This is where you would paste any style found on Snazzy Maps.
-				styles: [{
-					"featureType": "administrative",
-					"elementType": "geometry",
-					"stylers": [{
-						"visibility": "off"
-					}]
-				}, {
-					"featureType": "administrative",
-					"elementType": "geometry.fill",
-					"stylers": [{
-						"color": "#000000"
-					}, {
-						"visibility": "on"
-					}]
-				}, {
-					"featureType": "administrative",
-					"elementType": "labels.text.fill",
-					"stylers": [{
-						"color": "#444444"
-					}]
-				}, {
-					"featureType": "administrative",
-					"elementType": "labels.icon",
-					"stylers": [{
-						"hue": "#e73e15"
-					}]
-				}, {
-					"featureType": "administrative.province",
-					"elementType": "geometry.stroke",
-					"stylers": [{
-						"visibility": "off"
-					}]
-				}, {
-					"featureType": "landscape",
-					"elementType": "all",
-					"stylers": [{
-						"color": "#f2f2f2"
-					}]
-				}, {
-					"featureType": "landscape",
-					"elementType": "geometry.fill",
-					"stylers": [{
-						"color": "#ebebeb"
-					}, {
-						"lightness": 50
-					}]
-				}, {
-					"featureType": "landscape.man_made",
-					"elementType": "labels",
-					"stylers": [{
-						"saturation": "36"
-					}]
-				}, {
-					"featureType": "poi",
-					"elementType": "all",
-					"stylers": [{
-						"visibility": "off"
-					}]
-				}, {
-					"featureType": "poi",
-					"elementType": "labels.text",
-					"stylers": [{
-						"color": "#e93d15"
-					}, {
-						"visibility": "simplified"
-					}]
-				}, {
-					"featureType": "road",
-					"elementType": "all",
-					"stylers": [{
-						"saturation": -100
-					}, {
-						"lightness": 45
-					}]
-				}, {
-					"featureType": "road",
-					"elementType": "labels.icon",
-					"stylers": [{
-						"visibility": "off"
-					}]
-				}, {
-					"featureType": "road.highway",
-					"elementType": "all",
-					"stylers": [{
-						"visibility": "simplified"
-					}]
-				}, {
-					"featureType": "road.highway",
-					"elementType": "geometry.fill",
-					"stylers": [{
-						"color": "#e74700"
-					}, {
-						"visibility": "on"
-					}]
-				}, {
-					"featureType": "road.highway",
-					"elementType": "labels.text",
-					"stylers": [{
-						"visibility": "on"
-					}]
-				}, {
-					"featureType": "road.highway",
-					"elementType": "labels.text.fill",
-					"stylers": [{
-						"color": "#e93d15"
-					}, {
-						"visibility": "on"
-					}]
-				}, {
-					"featureType": "road.highway",
-					"elementType": "labels.text.stroke",
-					"stylers": [{
-						"color": "#ffffff"
-					}, {
-						"visibility": "on"
-					}]
-				}, {
-					"featureType": "road.arterial",
-					"elementType": "geometry.fill",
-					"stylers": [{
-						"color": "#d7d7d7"
-					}, {
-						"lightness": -5
-					}, {
-						"visibility": "on"
-					}]
-				}, {
-					"featureType": "road.arterial",
-					"elementType": "labels.icon",
-					"stylers": [{
-						"visibility": "off"
-					}]
-				}, {
-					"featureType": "road.local",
-					"elementType": "geometry.fill",
-					"stylers": [{
-						"color": "#d7d7d7"
-					}, {
-						"lightness": 40
-					}, {
-						"visibility": "on"
-					}]
-				}, {
-					"featureType": "road.local",
-					"elementType": "labels.text",
-					"stylers": [{
-						"color": "#e93d15"
-					}, {
-						"visibility": "on"
-					}]
-				}, {
-					"featureType": "road.local",
-					"elementType": "labels.text.fill",
-					"stylers": [{
-						"color": "#e93d15"
-					}]
-				}, {
-					"featureType": "road.local",
-					"elementType": "labels.text.stroke",
-					"stylers": [{
-						"color": "#ffffff"
-					}, {
-						"visibility": "on"
-					}]
-				}, {
-					"featureType": "transit",
-					"elementType": "all",
-					"stylers": [{
-						"visibility": "off"
-					}]
-				}, {
-					"featureType": "transit.station.rail",
-					"elementType": "labels.text.fill",
-					"stylers": [{
-						"color": "#000000"
-					}]
-				}, {
-					"featureType": "transit.station.rail",
-					"elementType": "labels.text.stroke",
-					"stylers": [{
-						"color": "#ffffff"
-					}]
-				}, {
-					"featureType": "water",
-					"elementType": "all",
-					"stylers": [{
-						"color": "#e73e15"
-					}, {
-						"visibility": "on"
-					}]
-				}, {
-					"featureType": "water",
-					"elementType": "geometry.fill",
-					"stylers": [{
-						"color": "#d7d7d7"
-					}, {
-						"lightness": 10
-					}, {
-						"visibility": "on"
-					}]
-				}]
-			};
-
-			// Get the HTML DOM element that will contain your map 
-			// We are using a div with id="map" seen below in the <body>
-			var mapElement = document.getElementById('contacts-map');
-
-			// Create the Google Map using our element and options defined above
-			var map = new google.maps.Map(mapElement, mapOptions);
-
-			// Let's also add a marker while we're at it
-			var marker = new google.maps.Marker({
-				position: new google.maps.LatLng(40.6700, -73.9400),
-				map: map,
-				title: 'Snazzy!'
+			const map = new ymaps3.YMap(document.getElementById('contacts-map'), {
+				location: {
+					center: [37.64, 55.76],
+					zoom: 10
+				}
 			});
+
+			const layer = new ymaps3.YMapDefaultSchemeLayer({
+				customization: 'yandex-map.json'
+			});
+			map.addChild(layer);
 		}
+
+		// ymaps3.ready.then(() => {
+		//     const map = new ymaps3.YMap(document.getElementById('contacts-map'), {
+		//         location: {
+		//             center: [55.650101, 37.540600],
+		//             zoom: 16,
+		//         }
+		//     });
+
+		//     // map.addChild(new YMapDefaultSchemeLayer({
+		//     //     customization: 'yandex-map.json'
+		//     // }));
+
+		//     const layer = new YMapDefaultSchemeLayer({
+		//         customization: [
+		//             // Делаем прозрачными все геометрии водных объектов.
+		//             {
+		//             tags: {
+		//                 all: ['water']
+		//             },
+		//             elements: 'geometry',
+		//             stylers: [
+		//                 {
+		//                 opacity: 0
+		//                 }
+		//             ]
+		//             },
+		//             // Меняем цвет подписей для всех POI и узлов сети общественного транспорта.
+		//             {
+		//             tags: {
+		//                 any: ['poi', 'transit_location']
+		//             },
+		//             elements: 'label.text.fill',
+		//             stylers: [
+		//                 {
+		//                 color: '#0000DD'
+		//                 }
+		//             ]
+		//             }
+		//         ]
+		//     });
+		//     map.addChild(layer);
+		// });
 	</script>
+	<!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+      ymaps.ready(function() {
+            var myMap = new ymaps.Map('contacts-map', {
+                center: [55.650101, 37.540600],
+                zoom: 16,
+                controls: [],
+            }),
+
+            myContent = ymaps.templateLayoutFactory.createClass('<div class="map-placemark"><b>NEO GEO</b><span>Бизнес-центр</span></div>');
+
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+                iconLayout: myContent,
+                iconImageHref: 'img/placemark.svg',
+                iconImageSize: [188, 63],
+                iconImageOffset: [-20, -20],
+                iconContentOffset: [15, 15],
+            });
+                
+            myMap.geoObjects
+                .add(myPlacemark)
+                
+        });
+    </script> -->
 	<!-- end of map -->
 </body>
 
